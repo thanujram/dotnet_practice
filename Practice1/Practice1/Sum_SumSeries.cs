@@ -14,21 +14,22 @@ namespace Practice1
             int x = Convert.ToInt32(Console.ReadLine());
 
             
-            int s_sum = 0;
+            int sum_sumSer = 0;
+
 
             for(int i = x; i > 0; i--)
             {
-                int sum = 0;
+                int sumSer = 0;
 
-                for (int j = x - i; j > 0; j--)
+                for (int j = i; j > 0; j--)
                 {
-                    sum = sum + j;
+                    sumSer = sumSer + j;
                 }
 
-                s_sum = s_sum + sum;
+                sum_sumSer = sum_sumSer + sumSer;
             }
 
-            Console.WriteLine("Sum of Sum Series: " + s_sum);
+            Console.WriteLine("Sum of Sum Series: " + sum_sumSer);
 
         }
     }
