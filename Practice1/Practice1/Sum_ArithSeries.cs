@@ -27,9 +27,10 @@ namespace Practice1
         {
             int sum = i;
 
-            for (int x = n; x > 0; x--)
+            for (int x = 1; x < n; x++)
             {
-                sum = sum + (i + (d * n));
+                sum = sum + (i + (d * x));
+                Console.WriteLine("Sum + " + sum);
             }
 
             return sum;
