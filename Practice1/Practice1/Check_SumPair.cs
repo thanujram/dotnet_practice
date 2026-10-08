@@ -12,7 +12,7 @@ namespace Practice1
         {
             int[] arr = { 0, -1, 2, -3, 1};
 
-            Console.WriteLine("Enter Target:");
+            Console.Write("Enter Target:");
             int t = Convert.ToInt32(Console.ReadLine());
 
             check_Pair(arr, t);
@@ -25,16 +25,20 @@ namespace Practice1
 
             for(int i = 0; i < n - 1; i++)
             {
+                Console.Write("a[i]:" + a[i] + " ");
+
                 for(int j = i + 1; j < n - 1; j++)
                 {
+                    Console.Write("a[j]:" + a[j] + " ");
+
                     if (a[i] + a[j] == t)
                     {
+                        Console.WriteLine("a[i] + a[j] = t -> " + a[i] + " + " + a[j] + " = " + t);
                         Console.WriteLine("Pair Found: " + a[i] + " & " + a[j]);
-                    }
+                        break;
+                    }   
                 }
             }
-
-            Console.WriteLine("Pair Not Found");
         }
     }
 }
